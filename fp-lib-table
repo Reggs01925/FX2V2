@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Gorf_V2)(type KiCad)(uri "$(KIPRJMOD)/Gorf_V2.pretty")(options "")(descr ""))
+  (lib (name S100)(type KiCad)(uri "$(KIPRJMOD)/S100.pretty")(options "")(descr ""))
+)

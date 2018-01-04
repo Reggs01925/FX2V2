@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TXB0108
+D TXS0108E 8-Bit Bi-directional, Level-Shifting, Voltage Translator
+K bidirectional voltage level translator converter
+F http://www.ti.com/lit/ds/symlink/txs0108e.pdf
+$ENDCMP
+#
+$CMP TXB0108DQSR
+D 8-bit bidirectional voltage level translator with auto-direction sensing USON package
+K bidirectional voltage level translator
+F http://www.ti.com/lit/ds/symlink/txb0108.pdf
+$ENDCMP
+#
+#End Doc Library

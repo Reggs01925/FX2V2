@@ -1,0 +1,98 @@
+
+(rules PCB Test01
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 27352)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.4)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 254.2)
+    (clear 127.0 (type smd_to_turn_gap))
+    (clear 63.6 (type smd_smd))
+  )
+  (padstack "Via[0-1]_685.8:330.2_um"
+    (shape
+      (circle F.Cu 685.8 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 685.8 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um" "Via[0-1]_685.8:330.2_um" default
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-kicad_default" "Via[0-1]_685.8:330.2_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_685.8:330.2_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_685.8:330.2_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +5V GND A15 A14 A13 A12 A11 10
+    A9 A8 A7 A6 A5 A4 A3 A2
+    A1 A0 "z_I_M1" "O_CPU_RESET" "z_O_INT" "z_I_MREQ" "z_I_WR" "z_I_RD"
+    "z_I_IORQ" "z_OUT_BUSRQ" "z_I_RFSH" "z_O_WAIT" "z_I_BUSAK" "FX2_IO<36>" "FX2_IO<37>" "FX2_IO<38>"
+    "FX2_IO<39>" "FX2_IO<40>" "z_data_io[0]" "z_data_io[1]" "z_data_io[2]" "z_data_io[3]" "z_data_io[4]" "z_data_io[5]"
+    "z_data_io[6]" "z_data_io[7]" FX2CLKOUT +3V3 "A8_5v" "A9_5v" "A10_5v" "A11_5v"
+    "A12_5v" "A13_5v" "A14_5v" "A15_5v" "A0_5v" "A1_5v" "A2_5v" "A3_5v"
+    "A4_5v" "A5_5v" "A6_5v" "A7_5v" D7 D6 D5 D4
+    D3 D2 D1 D0 BUSRQ IORQ RD WR
+    MREQ INT RESET M1 BUSAK WAIT RFSH 7M
+    "NOT_7M" "NOT_PHI" HORIZDR VERTDR "Net-(J5-Pad17)" +12V "-5V" "S100_5V"
+    "S100_RED" "S100_BLUE" "S100_VIDEO" "S100_2R5" "S100_CLK" "S100_OPPCLK" "S100_12V" "S100_CHROMA"
+    "S100_RESET" "S100_MINUS5V" "S100_7M" "S100_N_7M" "S100_GND" "S100_A6" "S100_A7" "S100_A8"
+    "S100_A9" "S100_A10" "S100_A11" "S100_A12" "S100_A13" "S100_A14" "S100_A15" "S100_RFSH"
+    "S100_WAIT" "S100_BUSACK" "S100_WR" "S100_BUSREQ" "S100_NMI" "S100_IORQ" "S100_MREQ" "S100_HALT"
+    "S100_INT" "S100_MXD5" "S100_MXD6" "S100_MXD7" "S100_D0" "S100_D1" "S100_D2" "S100_D3"
+    "S100_D4" "S100_D5" "S100_D6" "S100_D7" "S100_SCREENR" "S100_RMC0" "S100_RMC1" "S100_A0"
+    "S100_A1" "S100_A2" "S100_A3" "S100_A4" "S100_A5" "S100_MD3" "S100_MD2" "S100_MD1"
+    "S100_MD0" "S100_BUFA0" "S100_BUFA1" "S100_BUZOFF" "S100_WDOG" "S100_LPEN" "S100_VERTDR" "S100_HORZDR"
+    "S100_MC0" "S100_MC1" "S100_RD" "S100_M1" "S100_MXD0" "S100_MXD1" "S100_MXD2" "S100_MXD3"
+    "S100_MXD4" "S100_ScreenRam" "S100_WE" "S100_SER1" "S100_SER0" "S100_RAS0" "S100_CAS" "S100_DATEN"
+    "S100_MA0" "S100_MA1" "S100_MA2" "S100_MA3" "S100_MA4" "S100_MA5" "S100_MD7" "S100_MD6"
+    "S100_MD5" "S100_MD4"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

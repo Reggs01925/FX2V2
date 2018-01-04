@@ -1,0 +1,96 @@
+
+(rules PCB Test04
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 8779)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.8)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 254.2)
+    (clear 127.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-1]_685.8:330.2_um"
+    (shape
+      (circle F.Cu 685.8 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 685.8 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um" "Via[0-1]_685.8:330.2_um" default
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-kicad_default" "Via[0-1]_685.8:330.2_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_685.8:330.2_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_685.8:330.2_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND +5V A15 A14 A13 A12 A11 10
+    A9 A8 A7 A6 A5 A4 A3 A2
+    A1 A0 "z_I_M1" "O_CPU_RESET" "z_O_INT" "z_I_MREQ" "z_I_WR" "z_I_RD"
+    "z_I_IORQ" "z_OUT_BUSRQ" "z_I_RFSH" "z_O_WAIT" "z_I_BUSAK" "FX2_IO<36>" "FX2_IO<37>" "FX2_IO<38>"
+    "FX2_IO<39>" "FX2_IO<40>" "z_data_io[0]" "z_data_io[1]" "z_data_io[2]" "z_data_io[3]" "z_data_io[4]" "z_data_io[5]"
+    "z_data_io[6]" "z_data_io[7]" "Net-(J2-Pad1)" "Net-(J2-Pad2)" "Net-(J2-Pad3)" "Net-(J2-Pad4)" "Net-(J2-Pad5)" "Net-(J2-Pad6)"
+    "Net-(J2-Pad7)" "Net-(J2-Pad8)" FX2CLKOUT "Net-(J2-Pad10)" +3V3 "A8_5v" "A9_5v" "A10_5v"
+    "A11_5v" "A12_5v" "A13_5v" "A14_5v" "A15_5v" "A0_5v" "A1_5v" "A2_5v"
+    "A3_5v" "A4_5v" "A5_5v" "A6_5v" "A7_5v" D7 D6 D5
+    D4 D3 D2 D1 D0 BUSRQ IORQ RD
+    WR MREQ INT RESET M1 BUSAK WAIT RFSH
+    "Net-(U6-Pad18)" "Net-(J4-Pad15)" "Net-(J4-Pad16)" 7M "NOT_7M" "NOT_PHI" HORIZDR VERTDR
+    "Net-(J5-Pad1)" "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad4)" "Net-(J5-Pad5)" "Net-(J5-Pad6)" "Net-(J5-Pad7)" "Net-(J5-Pad8)"
+    "Net-(J5-Pad9)" "Net-(J5-Pad10)" "Net-(J5-Pad11)" "Net-(J5-Pad12)" "Net-(J5-Pad13)" "Net-(J5-Pad14)" "Net-(J5-Pad15)" "Net-(J5-Pad16)"
+    "Net-(J5-Pad17)" "Net-(J5-Pad18)" "Net-(J5-Pad19)" "Net-(J5-Pad20)" "Net-(J6-Pad1)" "Net-(J6-Pad2)" "Net-(J6-Pad3)" "Net-(J6-Pad4)"
+    "Net-(J6-Pad5)" "Net-(J6-Pad6)" "Net-(J6-Pad7)" "Net-(J6-Pad8)" "Net-(J6-Pad12)" "Net-(J6-Pad13)" "Net-(J6-Pad15)" "Net-(J6-Pad16)"
+    "Net-(J6-Pad17)" "Net-(J6-Pad18)" "Net-(J6-Pad19)" "Net-(J6-Pad20)" "Net-(J7-Pad1)" "Net-(J7-Pad2)" "Net-(J7-Pad3)" "Net-(J7-Pad4)"
+    "Net-(J7-Pad5)" "Net-(J7-Pad6)" "Net-(J7-Pad7)" "Net-(J7-Pad8)" "Net-(J7-Pad9)" "Net-(J7-Pad10)" "Net-(J7-Pad11)" "Net-(J7-Pad12)"
+    "Net-(J7-Pad13)" "Net-(J7-Pad14)" "Net-(J7-Pad15)" "Net-(J7-Pad16)" "Net-(J7-Pad17)" "Net-(J7-Pad18)" "Net-(J7-Pad19)" "Net-(J7-Pad20)"
+    "Net-(J8-Pad1)" "Net-(J8-Pad2)" "Net-(J8-Pad11)" "Net-(J8-Pad12)" "Net-(J8-Pad13)" "Net-(J8-Pad14)" "Net-(J8-Pad15)" "Net-(J8-Pad16)"
+    "Net-(J8-Pad18)" "Net-(J8-Pad19)" "Net-(J8-Pad20)" "Net-(J9-Pad3)" "Net-(J9-Pad4)" "Net-(J9-Pad5)" "Net-(J9-Pad6)" "Net-(J9-Pad13)"
+    "Net-(J10-Pad1)" "Net-(J10-Pad4)" "Net-(J10-Pad6)" "Net-(J10-Pad2)" "Net-(J10-Pad5)" "Net-(R1-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
